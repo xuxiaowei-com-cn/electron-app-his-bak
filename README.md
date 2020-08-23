@@ -24,3 +24,8 @@ npm i -D vue-loader
 npm i -D vue-template-compiler
 npm i -D copy-webpack-plugin
 ~~~
+
+## ffi-napi
+~~~
+npm i ffi-napi
+~~~
