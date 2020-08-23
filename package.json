@@ -85,6 +85,7 @@
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
+    "ffi-napi": "^3.0.1",
     "vue": "^2.6.12"
   }
 }

@@ -1,4 +1,7 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
+
+const ffi = require('ffi-napi');
+const path = require('path');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
@@ -44,3 +47,33 @@ app.on('activate', () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
+
+/**
+ * dll 路径
+ * @type {string} 绝对路径
+ */
+const calculationPath = path.join(__dirname, 'dll/demo', 'calculation.dll');
+
+/**
+ * 调用 dll 示例（加/乘法）
+ */
+ipcMain.on('calculation', (event, arg) => {
+  console.log(`调用 calculation.dll ${arg[0]} arg:`, arg);
+
+  const calculation = new ffi.Library(calculationPath, {
+    sum:
+        [
+          'double', ['double', 'double'],
+        ],
+    multiplication:
+        [
+          'double', ['double', 'double'],
+        ],
+  });
+
+  const result = calculation[arg[0]](arg[1], arg[2]);
+
+  console.log(`调用 calculation.dll ${arg[0]} 结果:`, result);
+
+  event.reply('reply-calculation', result);
+});

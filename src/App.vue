@@ -7,11 +7,18 @@
 
 <script>
     import HelloWorld from './components/HelloWorld.vue'
+    const { ipcRenderer } = require('electron');
 
     export default {
         name: 'App',
         components: {
             HelloWorld
+        },
+        created() {
+            ipcRenderer.send('calculation', ['sum', 223, 443]);
+            ipcRenderer.on('reply-calculation', (event, arg) => {
+                console.log(arg)
+            });
         }
     }
 </script>
