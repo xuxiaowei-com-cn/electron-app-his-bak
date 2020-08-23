@@ -15,3 +15,11 @@ npm i -D eslint-plugin-import
 npm i -D eslint-plugin-jsx-a11y
 npm i -D eslint-plugin-react
 ~~~
+
+## vue
+~~~
+npm i vue
+npm i -D vue-loader
+npm i -D vue-template-compiler
+npm i -D copy-webpack-plugin
+~~~
