@@ -17,6 +17,7 @@ npm i -D eslint-plugin-react
 ~~~
 
 ## vue
+- [copy-webpack-plugin](https://developer.aliyun.com/mirror/npm/package/copy-webpack-plugin)
 ~~~
 npm i vue
 npm i -D vue-loader
