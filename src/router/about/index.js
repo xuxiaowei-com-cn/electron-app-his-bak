@@ -1,7 +1,7 @@
 import About from '../../views/about/index.vue';
 
 const aboutRoutes = {
-  path: '/',
+  path: '/about',
   name: 'About',
   component: About,
 };
