@@ -29,6 +29,7 @@
 import './index.css';
 
 import Vue from 'vue';
+import ElementUI from 'element-ui';
 import App from './App.vue';
 import router from './router';
 import store from './store';
@@ -36,6 +37,8 @@ import store from './store';
 import sysLog from './log';
 
 sysLog.log('👋 This message is being logged by "renderer.js", included via webpack');
+
+Vue.use(ElementUI);
 
 Vue.config.productionTip = false;
 
