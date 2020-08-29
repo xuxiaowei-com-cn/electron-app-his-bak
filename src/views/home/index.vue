@@ -1,8 +1,8 @@
 <template>
-  <div class="home">
+  <el-container id="home">
     <img alt="Vue logo" src="assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  </el-container>
 </template>
 
 <script>
@@ -17,6 +17,10 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+
+</style>
 
 <style scoped>
 

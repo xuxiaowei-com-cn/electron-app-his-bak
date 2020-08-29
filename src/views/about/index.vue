@@ -1,7 +1,7 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <el-container id="about">
+    <h2>About</h2>
+  </el-container>
 </template>
 
 <script>
@@ -9,6 +9,10 @@ export default {
   name: 'About'
 };
 </script>
+
+<style lang="scss">
+
+</style>
 
 <style scoped>
 
