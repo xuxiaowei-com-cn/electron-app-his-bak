@@ -30,6 +30,7 @@ import './index.css';
 
 import Vue from 'vue';
 import App from './App.vue';
+import router from './router';
 
 import sysLog from './log';
 
@@ -38,5 +39,6 @@ sysLog.log('👋 This message is being logged by "renderer.js", included via web
 Vue.config.productionTip = false;
 
 new Vue({
+  router,
   render: (h) => h(App),
 }).$mount('#app');
