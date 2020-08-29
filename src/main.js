@@ -1,3 +1,5 @@
+import sysLog from './log';
+
 const { app, BrowserWindow } = require('electron');
 
 const path = require('path');
@@ -21,6 +23,9 @@ const createWindow = () => {
   // and load the index.html of the app.
   // eslint-disable-next-line no-undef
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
+
+  // eslint-disable-next-line no-undef
+  sysLog.log('项目启动时文件路径：', MAIN_WINDOW_WEBPACK_ENTRY);
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();

@@ -31,7 +31,9 @@ import './index.css';
 import Vue from 'vue';
 import App from './App.vue';
 
-console.log('👋 This message is being logged by "renderer.js", included via webpack');
+import sysLog from './log';
+
+sysLog.log('👋 This message is being logged by "renderer.js", included via webpack');
 
 Vue.config.productionTip = false;
 
